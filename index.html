@@ -7,13 +7,103 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Naduni Samarawickrama Portfolio</title>
+    <style>
+        /* Mobile Responsive Additions (without changing original design) */
+        @media (max-width: 768px) {
+            .header {
+                padding: 2rem 5%;
+            }
+            
+            #menu-icon {
+                display: block;
+                font-size: 3rem;
+            }
+            
+            .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--bg-color);
+                padding: 1rem 3%;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .navbar.active {
+                display: flex;
+            }
+            
+            .navbar a {
+                margin: 1rem 0;
+            }
+            
+            .home {
+                flex-direction: column;
+                text-align: center;
+                gap: 3rem;
+                padding-top: 10rem;
+            }
+            
+            .home-content {
+                align-items: center;
+            }
+            
+            .home-img img {
+                width: 60vw;
+            }
+            
+            .timeline-items::before {
+                left: 7px;
+            }
+            
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                padding-left: 37px;
+                padding-right: 0;
+                text-align: left;
+            }
+            
+            .timeline-dot {
+                left: 0;
+            }
+            
+            .wrapper {
+                grid-template-columns: 1fr;
+            }
+            
+            .projects-item {
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            html {
+                font-size: 55%;
+            }
+            
+            .heading {
+                font-size: 6rem;
+            }
+            
+            .home-content h1 {
+                font-size: 5rem;
+            }
+            
+            .footer ul li {
+                display: block;
+                margin: 1rem 0;
+            }
+        }
+    </style>
 </head>
 <body>
   <header class="header">
     <a href="#home" class="logo">Naduni
       <span class="" style="font-weight: 500; font-size: 24px;">Samarawickrama</span>
     </a>
-    <i class='bx-bx-menu' id="menu-icon"></i>
+    <i class='bx bx-menu' id="menu-icon"></i>
     <nav class="navbar">
       <a href="#home" class="">Home</a>
       <a href="#education">Education</a>
@@ -35,7 +125,6 @@
         <a href="#" style="pointer-events: none; opacity: 0.5;"><i class='bx bxl-twitter' ></i></a>
       </div>
       <div class="btn-group">
-        <!-- <a href="#" class="btn">Hire</a> -->
         <a href="#contact" class="btn">Contact</a>
       </div>
     </div>
@@ -55,7 +144,6 @@
             <h3>High School</h3>
             <p>MR/Shariputhra Collage Up to A/L</p>
           </div>
-        
       </div>
 
       <div class="timeline-item">
@@ -63,22 +151,19 @@
           <div class="timeline-date">2019</div>
           <div class="timeline-content">
             <h3>Courses</h3>
-            <p>
-              Complete English Certificate Course
-            </p>
+            <p>Complete English Certificate Course</p>
           </div>
-        
       </div>
+      
       <div class="timeline-item">
         <div class="timeline dot"></div>
           <div class="timeline-date">2020-2024</div>
           <div class="timeline-content">
             <h3>University (Graduated)</h3>
-            <p>Sri Lanka Institute of Information Technology</br>
+            <p>Sri Lanka Institute of Information Technology<br>
               Bsc.(hons).Information Technology Specilization in Information Technology.
             </p>
-          
-        </div>
+          </div>
       </div>
     </div>
   </section>
@@ -87,7 +172,6 @@
     <h2 class="heading">Work Experience</h2>
     <div class="timeline-items">
 
-
       <div class="timeline-item">
         <div class="timeline dot"></div>
           <div class="timeline-date">2023</div>
@@ -95,8 +179,8 @@
             <h3>Software Enginner Internship</h3>
             <p>Worked as an Internship Software Engineer in CreatIT Solutions</p>
           </div>
-        
       </div>
+      
       <div class="timeline-item">
         <div class="timeline dot"></div>
           <div class="timeline-date">2024</div>
@@ -104,172 +188,149 @@
             <h3>Associate Software Enginner</h3>
             <p>Working as an Associate Software Engineer in CreatIT Solutions</p>
           </div>
-        
       </div>
     </div>
   </section>
 
-  <!-- <section class="services">
-    <h2 class="heading">Services</h2>
-    <div class="services-container">
-       <div class="services-box">
-        <div class="service-info">
-          <h4>UI Design</h4>
-          <p>Provide Creative UI/UX Design Servise</p>
+  <section class="projects" id="projects">
+    <div class="projects-box">
+      <h2 class="" style="font-size: 8rem;">Projects</h2>
+      <div class="wrapper">
+
+        <a style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://lifehacker.com/imagery/articles/01HF2H25FNY97E7KS82J8RFSXD/hero-image.fill.size_1248x702.v1699834114.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;" 
+            href="https://github.com/naduni98/burger-shop-nextjs" 
+            target="_blank" 
+            class="projects-item">
+          <h2 style="line-height: 1.4;">Burger Shop</h2>
+          <h4>2024</h4>
+          <p>This is a Next.js project for burger shop.</p>
+        </a>
+
+        <div style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Images/project/Late-blight-on-potato-leaf-Jean-Ristain.webp'); background-position: center; background-repeat: no-repeat; background-size: cover;" 
+          class="projects-item">
+          <h2 style="line-height: 1.4;">Desease Detection</h2>
+          <h4>Feb 2024 - Apr 2024</h4>
+          <p>This is a machine learning algorithm related project our final year machine learning module.</p>
         </div>
-       </div>
-       <div class="services-box">
-        <div class="service-info">
-          <h4>Frontend Development</h4>
-          <p>Provide Frontend Develope Servise</p>
+
+        <a style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Images/project/QR_L-1.png'); background-position: center; background-repeat: no-repeat; background-size: cover;"
+        href="https://github.com/naduni98/qr-attendance-system-2023" target="_blank" class="projects-item">
+          <h2 style="line-height: 1.4;">QR Attendance System</h2>
+          <h4>Feb 2023 - Jun 2023</h4>
+          <p>This is a JavaFX Project for Local client (for GYM)</p>
+        </a>
+        
+       <div style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Images/project/shutterstock_1012764895.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;"
+        class="projects-item">
+          <h2>Foodie</h2>
+          <h4>Feb 2023 - Jun 2023</h4>
+          <p>This is a social media app we develop as a web application under the Programming Application Framework Module.</p>
         </div>
-       </div>
-       <div class="services-box">
-        <div class="service-info">
-          <h4>Backend Development</h4>
-          <p>Provide Backend Developer Servise</p>
+        
+        <a style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Images/project/istockphoto-1293283791-612x612.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;"
+        href="https://github.com/naduni98/ITPM_Greenwave" target="_blank" class="projects-item">
+          <h2>GreenWave</h2>
+          <h4>Feb 2023 - Jun 2023</h4>
+          <p>This is a web application under the Information Technology Project Management Module.</p>
+        </a>
+        
+        <a style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Images/project/SeiLanka_MobileVideoHero.original.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;"
+         href="https://github.com/naduni98/HappyTours" target="_blank" class="projects-item">
+          <h2>Happy Tours</h2>
+          <h4>Feb 2022 - Jun 2022</h4>
+          <p>This is a mobile application under the Mobile Application Development Module.</p>
+        </a>
+        
+        <div style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Images/project/1583275772247.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover;"
+        class="projects-item">
+          <h2>Travelopedia</h2>
+          <h4>Feb 2022 - Jun 2022</h4>
+          <p>This is a web application for the travel agency system under the Information Technology Project Module.</p>
         </div>
-       </div>
-       <div class="services-box">
-        <div class="service-info">
-          <h4>Web Development</h4>
-          <p>Provide Web Developer Servise</p>
+        
+        <div style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Images/project/https___cdn.webp'); background-position: center; background-repeat: no-repeat; background-size: cover;"
+        class="projects-item">
+          <h2>Online Banking Web Application</h2>
+          <h4>Jul 2021 - Dec 2021</h4>
+          <p>This is a web application used MVC architecture under the Object Orientated Programming Module.</p>
         </div>
-       </div>
+        
+        <div style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Images/project/ecommerce-seo-tips.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;"
+        class="projects-item">
+          <h2>E-Commerce Application</h2>
+          <h4>Feb 2021 - Jun 2021</h4>
+          <p>This is a web site used java script and php under the Internet and Web Technologies Module.</p>
+        </div>
+        
+       <a style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Images/project/Pizza-3007395.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;"
+        href="https://github.com/naduni98/Pizza-Creed-2023-Galle" target="_blank" class="projects-item">
+          <h2>Pizza creed</h2>
+          <h4>Feb 2023 - Jun 2023</h4>
+          <p>This is a web application backend created using Spring Boot framework.</p>
+        </a>
+      </div>
     </div>
-  </section> -->
-
-      <section class="projects" id="projects">
-        <div class="projects-box">
-          <h2 class="" style="font-size: 8rem;">Projects</h2>
-          <div class="wrapper" aria-colcount="">
-
-            <a style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://lifehacker.com/imagery/articles/01HF2H25FNY97E7KS82J8RFSXD/hero-image.fill.size_1248x702.v1699834114.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;" 
-                href="https://github.com/naduni98/burger-shop-nextjs" 
-                target="_blank" 
-                class="projects-item">
-              <h2 style="line-height: 1.4;">Burger Shop</h2>
-              <h4>2024</h4>
-              <p>This is a Next.js project for burger shop.</p>
-            </a>
-
-            <div style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Images/project/Late-blight-on-potato-leaf-Jean-Ristain.webp'); background-position: center; background-repeat: no-repeat; background-size: cover;" 
-              class="projects-item">
-              <h2 style="line-height: 1.4;">Desease Detection</h2>
-              <h4>Feb 2024 - Apr 2024</h4>
-              <p>This is a machine learning algorithm related project our final year machine learning module.</p>
-            </div>
-
-            <a style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Images/project/QR_L-1.png'); background-position: center; background-repeat: no-repeat; background-size: cover;"
-            href="https://github.com/naduni98/qr-attendance-system-2023" target="_blank" class="projects-item">
-              <h2 style="line-height: 1.4;">QR Attendance System</h2>
-              <h4>Feb 2023 - Jun 2023</h4>
-              <p>This is a JavaFX Project for Local client (for GYM)</p>
-            </a>
-            <div style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Images/project/shutterstock_1012764895.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;"
-            class="projects-item">
-              <h2>Foodie</h2>
-              <h4>Feb 2023 - Jun 2023</h4>
-              <p>This is a social media app we develop as a web application under the Programming Application Framework Module.
-              </p>
-            </div>
-            <a style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Images/project/istockphoto-1293283791-612x612.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;"
-            href="https://github.com/naduni98/ITPM_Greenwave" target="_blank" class="projects-item">
-              <h2>GreenWave</h2>
-              <h4>Feb 2023 - Jun 2023</h4>
-              <p>This is a web application under the Information Technology Project Management Module.</p>
-            </a>
-            <a style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Images/project/SeiLanka_MobileVideoHero.original.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;"
-             href="https://github.com/naduni98/HappyTours" target="_blank" class="projects-item">
-              <h2>Happy Tours</h2>
-              <h4>Feb 2022 - Jun 2022</h4>
-              <p>This is a mobile application under the Mobile Application Development Module.
-                </p>
-              </a>
-            <div style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Images/project/1583275772247.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover;"
-            class="projects-item">
-              <h2>Travelopedia</h2>
-              <h4>Feb 2022 - Jun 2022</h4>
-              <p>This is a web application for the travel agency system under the Information Technology Project Module.
-              </p>
-            </div>
-            <div style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Images/project/https___cdn.webp'); background-position: center; background-repeat: no-repeat; background-size: cover;"
-            class="projects-item">
-              <h2>Online Banking Web Application</h2>
-              <h4>Jul 2021 - Dec 2021</h4>
-              <p>This is a web application used MVC architecture under the Object Orientated Programming Module.
-              </p>
-            </div>
-            <div style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Images/project/ecommerce-seo-tips.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;"
-            class="projects-item">
-              <h2>E-Commerce Application</h2>
-              <h4>Feb 2021 - Jun 2021</h4>
-              <p>This is a web site used java script and php under the Internet and Web Technologies Module.</p>
-            </div>
-            <a style=" background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Images/project/Pizza-3007395.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;"
-            href="https://github.com/naduni98/Pizza-Creed-2023-Galle" target="_blank" class="projects-item">
-              <h2>Pizza creed</h2>
-              <h4>Feb 2023 - Jun 2023</h4>
-              <p>This is a web application backend created using Spring Boot framework.</p>
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="contact" style="min-height: auto !important;" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-        <div class="">
-          <p class="" style="text-align: center; display: flex; align-items: center; justify-content: center;">
-            <a class="" style="font-size: 18px; text-decoration: none; color: #fff;" href="mailto:nadunis84@gmail.com">nadunis84@gmail.com&nbsp;&nbsp;&nbsp;</a>
-            <label style="font-size: 18px; ">|&nbsp;&nbsp;&nbsp;+94 71 8915 814&nbsp;&nbsp;&nbsp;</label>
-            <a class="" style="font-size: 18px; text-decoration: none; color: #fff;" href="https://www.linkedin.com/in/naduni-samarawickrama-b33b60224/" target="_blank" >|&nbsp;&nbsp;&nbsp;Via Linkdin</a>
-          </p>
-        </div>
-         <!-- <form action="">
-          <div class="input-group">
-            <div class="input-box">
-              <input type="text" placeholder="Full Name">
-              <input type="email" placeholder="Email">
-            </div>
-            <div class="input-box">
-              <input type="number" placeholder="Phone Number">
-              <input type="text" placeholder="Subject">
-            </div>
-          </div>
-             <div class="input-group-2">
-              <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-              <input type="submit" value="Send Message" class="btn">
-             </div>
-          
-         </form> -->
-      </section>
-   <footer class="footer">
-     <div class="social">
-        <a href="https://github.com/naduni98" target="_blank"><i class='bx bxl-github'></i></a>
-        <a href="https://www.linkedin.com/in/naduni-samarawickrama-b33b60224/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
-        <a href="#" style="pointer-events: none; opacity: 0.5;"><i class='bx bxl-instagram'></i></a>
-        <a href="#" style="pointer-events: none; opacity: 0.5;"><i class='bx bxl-twitter' ></i></a>
-     </div>
-     <ul class="list">
-      <li>
-        <a href="#">FAQ</a>
-      </li>
-      <li>
-        <a href="#">Services</a>
-      </li>
-      <li>
-        <a href="#">About Me</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
-      </li>
-      <li>
-        <a href="#">Projects</a>
-      </li>
-     </ul>
-     <p class="copyright">
+  </section>
+  
+  <section class="contact" style="min-height: auto !important;" id="contact">
+    <h2 class="heading">Contact <span>Me</span></h2>
+    <div class="">
+      <p class="" style="text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap;">
+        <a class="" style="font-size: 18px; text-decoration: none; color: #fff;" href="mailto:nadunis84@gmail.com">nadunis84@gmail.com</a>
+        <label style="font-size: 18px;">&nbsp;&nbsp;|&nbsp;&nbsp;</label>
+        <label style="font-size: 18px;">+94 71 8915 814</label>
+        <label style="font-size: 18px;">&nbsp;&nbsp;|&nbsp;&nbsp;</label>
+        <a class="" style="font-size: 18px; text-decoration: none; color: #fff;" href="https://www.linkedin.com/in/naduni-samarawickrama-b33b60224/" target="_blank">LinkedIn</a>
+      </p>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="social">
+      <a href="https://github.com/naduni98" target="_blank"><i class='bx bxl-github'></i></a>
+      <a href="https://www.linkedin.com/in/naduni-samarawickrama-b33b60224/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+      <a href="#" style="pointer-events: none; opacity: 0.5;"><i class='bx bxl-instagram'></i></a>
+      <a href="#" style="pointer-events: none; opacity: 0.5;"><i class='bx bxl-twitter' ></i></a>
+    </div>
+    <ul class="list">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#services">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="copyright">
       Naduni Samarawickrama | All Right Reserved
-     </p>
-   </footer>
-    <script src="script.js"></script>
+    </p>
+  </footer>
+  
+  <script>
+    // Mobile menu functionality
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.querySelector('.navbar');
+    
+    menuIcon.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+        menuIcon.classList.toggle('bx-x');
+    });
+    
+    // Close menu when clicking on nav links
+    document.querySelectorAll('.navbar a').forEach(link => {
+        link.addEventListener('click', () => {
+            navbar.classList.remove('active');
+            menuIcon.classList.remove('bx-x');
+        });
+    });
+    
+    // Smooth scrolling for all links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+  </script>
 </body>
 </html>
